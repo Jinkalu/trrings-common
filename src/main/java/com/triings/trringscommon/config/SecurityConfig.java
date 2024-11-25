@@ -38,6 +38,8 @@ public class SecurityConfig {
                 // Authorization rules
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(
+                                "/user-service/v3/api-docs",
+                                "/post-service/v3/api-docs",
                                 "/api/v1/auth/**",
                                 "/api/v1/user/**",
                                 "/api/v1/otp/**",
