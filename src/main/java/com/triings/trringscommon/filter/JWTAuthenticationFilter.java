@@ -43,11 +43,11 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
                                     @NotNull FilterChain filterChain)
             throws ServletException, IOException {
 
-/*        String gatewayToken = request.getHeader("X-Gateway-Token");
+        String gatewayToken = request.getHeader("X-Gateway-Token");
         if (Objects.isNull(gatewayToken) || jwtAuthenticationService.validateGatewayToken(gatewayToken)) {
-            sendErrorResponse(response, UNAUTHORIZED, "Invalid request");
+            sendErrorResponse(response, UNAUTHORIZED, "Unauthorized access");
             return;
-        }*/
+        }
         // Extract the Authorization header
         final String authHeader = request.getHeader("Authorization");
         if (authHeader == null || !authHeader.startsWith("Bearer ")) {
